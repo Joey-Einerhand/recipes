@@ -12,16 +12,16 @@ layout: default
             {{ page.date | date_to_string }}
             {% assign author = site.authors | where: 'author', page.author | first %}
             {% if author %}
-                - <a class="author" href="{{ author.url }}">Author: {{ author.name }}</a>
+                - <a class="author" href="{{ site.baseurl }}{{ author.url }}">Author: {{ author.name }}</a>
             {% endif %}
             - 
             {% for category in page.categories %}
-                <a class="categories" href="/categories/{{ category }}">{{ category }}</a>
+                <a class="categories" href="{{ site.baseurl }}/categories/{{ category }}">{{ category }}</a>
                 {% unless forloop.last %} • {% endunless %}
             {% endfor %}
         </p>
     </div>
-    <img src="{{ page.image }}" alt="{{ page.title }}" class="thumbnail rounded">
+    <img src="{{ site.baseurl }}{{ page.image }}" alt="{{ page.title }}" class="thumbnail rounded">
     <div class="row recipe-description">
         {{ content }}  
     </div>

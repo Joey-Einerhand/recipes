@@ -11,12 +11,12 @@ title: Search
 <script>
   window.store = {
     {% for recipe in site.recipes %}
-      "{{ recipe.url | slugify }}": {
+      "{{ recipe.url | relative_url |sss slugify }}": {
         "title": "{{ recipe.title | xml_escape }}",
         "author": "{{ recipe.author | xml_escape }}",
         "categories": "{{ recipe.categories | xml_escape }}",
         "content": {{ recipe.content | strip_html | strip_newlines | jsonify }},
-        "url": "{{ recipe.url | xml_escape }}",
+        "url": "{{ recipe.url | relative_url | xml_escape }}",
         "image": "{{ recipe.image | xml_escape }}",
         "preptime": "{{ recipe.total-time | xml_escape }}"
       }
@@ -24,6 +24,6 @@ title: Search
     {% endfor %}
   };
 </script>
-<script src="/assets/js/lunr.js"></script>
-<script src="/assets/js/search.js"></script>
+<script src="{{ site.baseurl }}/assets/js/lunr.js"></script>
+<script src="{{ site.baseurl }}/assets/js/search.js"></script>
 

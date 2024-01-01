@@ -13,15 +13,15 @@ layout: default
 {% endif %}
 {% for recipe in recipes_to_show %}
     <div class="col-md-3 recipe-post col col-12 justify-content-top">
-        <a href="{{ recipe.url }}" class="col-12">
-            <img src="{{ recipe.image }}" alt="{{ recipe.title }}" class="thumbnail rounded">
+        <a href="{{ site.baseurl }}{{ recipe.url }}" class="col-12">
+            <img src="{{ site.baseurl }}{{ recipe.image }}" alt="{{ recipe.title }}" class="thumbnail rounded">
         </a>
         <div class="col-12">
-            <h2 class="mb-0"><a href="{{ recipe.url }}">{{ recipe.title }}</a></h2>
+            <h2 class="mb-0"><a href="{{ site.baseurl }}{{ recipe.url }}">{{ recipe.title }}</a></h2>
         </div>
         <div class="categories-list col-12">
             {% for category in recipe.categories %}
-            <a class="categories" href="/categories/{{ category }}">{{ category }}</a>
+            <a class="categories" href="{{ site.baseurl }}/categories/{{ category }}">{{ category }}</a>
             {% unless forloop.last %} • {% endunless %}
             {% endfor %}
         </div>

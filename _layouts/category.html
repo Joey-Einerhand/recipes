@@ -9,7 +9,7 @@ layout: recipe-grid
     <div class="category-list col-md-6 row justify-content-center gx-5">
         {% assign sorted_categories = site.categories | sort: 'order' %}
         {% for category in sorted_categories %}
-            <a href="/categories/{{ category.name }}" class="col-auto btn btn-outline-primary {% if page.category and page.category == category.name %}active{% endif %} ">{{ category.name }}</a>
+            <a href="{{ site.baseurl }}/categories/{{ category.name }}" class="col-auto btn btn-outline-primary {% if page.category and page.category == category.name %}active{% endif %} ">{{ category.name }}</a>
         {% endfor %}
     </div>
 </div>

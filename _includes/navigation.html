@@ -1,7 +1,7 @@
 <header class="navbar navbar-expand-lg">
   <nav class="container-xxl bd-gutter flex-wrap glax-lg-nowrap" data-bs-theme="dark">
-    <a class="navbar-brand" href="/recipes/">
-      <img src="{{ site.logo }}" alt="{{ site.title }}" width="75" height="75">
+    <a class="navbar-brand" href="{{ site.baseurl }}/recipes/">
+      <img src="{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title }}" width="75" height="75">
     </a>
     <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -16,7 +16,7 @@
         </li>
         {% endfor %}  
       </ul>
-      <form action="/search.html" method="get" class="ms-auto d-flex" role="search">
+      <form action="{{ site.baseurl }}/search.html" method="get" class="ms-auto d-flex" role="search">
         <input class="form-control me-2" type="text" placeholder="Kiwi Apple Banana" id="search-box" aria-label="Search" name="query">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
