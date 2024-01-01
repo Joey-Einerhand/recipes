@@ -17,7 +17,7 @@ title: Search
         "categories": "{{ recipe.categories | xml_escape }}",
         "content": {{ recipe.content | strip_html | strip_newlines | jsonify }},
         "url": "{{ recipe.url | relative_url | xml_escape }}",
-        "image": "{{ recipe.image | xml_escape }}",
+        "image": "{{ recipe.image | relative_url| xml_escape }}",
         "preptime": "{{ recipe.total-time | xml_escape }}"
       }
       {% unless forloop.last %},{% endunless %}
