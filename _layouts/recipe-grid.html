@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+
+{{ content }}
+<div class="row">
+{% assign recipes_to_show = site.recipes %}
+{% if page.author %}
+    {% assign recipes_to_show = site.recipes | where: 'author', page.author %}
+{% elsif page.category %}
+    {% assign recipes_to_show = site.recipes | where: 'categories', page.category %}
+{% endif %}
+{% for recipe in recipes_to_show %}
+    <div class="col-md-3 recipe-post col col-12 justify-content-top">
+        <a href="{{ recipe.url }}" class="col-12">
+            <img src="{{ recipe.image }}" alt="{{ recipe.title }}" class="thumbnail rounded">
+        </a>
+        <div class="col-12">
+            <h2 class="mb-0"><a href="{{ recipe.url }}">{{ recipe.title }}</a></h2>
+        </div>
+        <div class="categories-list col-12">
+            {% for category in recipe.categories %}
+            <a class="categories" href="/categories/{{ category }}">{{ category }}</a>
+            {% unless forloop.last %} • {% endunless %}
+            {% endfor %}
+        </div>
+        <div class="row timer col-12">
+            {% if recipe.prep-time %}
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill col-auto" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                </svg>
+                <p class="col-auto">
+                    {{ recipe.total-time }}
+                </p>
+            {% endif %}
+        </div>
+    </div>
+{% endfor %}
+</div>
+
+  
