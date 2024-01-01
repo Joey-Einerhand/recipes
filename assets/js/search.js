@@ -22,7 +22,7 @@
           appendString += '  <div class="categories-list col-12">';
           if (categoryArray.length > 1) {
           for (let category of categoryArray) {
-              appendString += '      <a class="categories" href="/categories/' + category.toLowerCase() + '">' + category  + '</a>';
+              appendString += '      <a class="categories" href="'+ item.baseurl +'/categories/' + category.toLowerCase() + '">' + category  + '</a>';
               if (category != categoryArray[categoryArray.length - 1]) {
                 appendString += '      • ';
               }
@@ -85,6 +85,7 @@
               'content': window.store[key].content,
               'image': window.store[key].image,
               'preptime': window.store[key].preptime,
+              'baseurl': window.store[key].baseurl
             });
         }
       });
