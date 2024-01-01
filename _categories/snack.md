@@ -1,5 +1,5 @@
 ---
 name: Snack
-category: Snack
+category: snack
 order: 4
 ---

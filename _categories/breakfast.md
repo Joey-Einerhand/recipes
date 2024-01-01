@@ -1,5 +1,5 @@
 ---
 name: Breakfast
-category: Breakfast
+category: breakfast
 order: 3
 ---

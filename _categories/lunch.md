@@ -1,5 +1,5 @@
 ---
 name: Lunch
-category: Lunch
+category: lunch
 order: 2
 ---

@@ -1,5 +1,5 @@
 ---
 name: Sweet
-category: Sweet
+category: sweet
 order: 6
 ---

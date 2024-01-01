@@ -1,5 +1,5 @@
 ---
 name: Savory
-category: Savory
+category: ssavory
 order: 5
 ---

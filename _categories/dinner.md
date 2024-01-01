@@ -1,5 +1,5 @@
 ---
 name: Dinner
-category: Dinner
+category: dinner
 order: 1
 ---
