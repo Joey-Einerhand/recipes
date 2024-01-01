@@ -16,7 +16,7 @@ layout: default
             {% endif %}
             - 
             {% for category in page.categories %}
-                <a class="categories" href="{{ site.baseurl }}/categories/{{ category.category }}">{{ category.name }}</a>
+                <a class="categories" href="{{ site.baseurl }}/categories/{{ category | downcase }}">{{ category }}</a>
                 {% unless forloop.last %} • {% endunless %}
             {% endfor %}
         </p>
