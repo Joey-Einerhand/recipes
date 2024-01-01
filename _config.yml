@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Jojo's Recipes is full of awesome recipes curated by Jojo (Panda) and Bun.
   Some recipes are written by us, some are from friends and family, and some are
   our favourites from the internet. We hope you enjoy them as much as we do!
-baseurl: "/recipes/" # the subpath of your site, e.g. /blog
+baseurl: "/recipes" # the subpath of your site, e.g. /blog
 url: "https://joeyehand.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  Joey-Einerhand
 logo: "/assets/images/logo_transparant.png"
