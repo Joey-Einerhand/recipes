@@ -9,7 +9,7 @@ layout: default
 {% if page.author %}
     {% assign recipes_to_show = site.recipes | where: 'author', page.author %}
 {% elsif page.category %}
-    {% assign recipes_to_show = site.recipes | where: 'categories', page.category %}
+    {% assign recipes_to_show = site.recipes | where: 'category', page.category %}
 {% endif %}
 {% for recipe in recipes_to_show %}
     <div class="col-md-3 recipe-post col col-12 justify-content-top">

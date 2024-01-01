@@ -1,6 +1,6 @@
 ---
 author: Panda
-categories: Savory Dessert
+categories: Sweet Dessert
 # This is also the URL
 # like www.url.com/recipes/apples-copy-2/
 title: Speculaas Tiramisu Version 1
