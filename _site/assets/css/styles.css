@@ -55,3 +55,5 @@ h2 { font-family: 'Roboto', serif; font-weight: 400 !important; font-size: 1.5re
 .timer p { font-family: 'Roboto', serif; font-weight: 300 !important; font-size: 1rem; margin-top: -0.2rem; padding-left: 0rem; }
 
 .timer svg { padding-right: 0.2rem; }
+
+.navbar-brand img { height: 3rem; width: auto; }
